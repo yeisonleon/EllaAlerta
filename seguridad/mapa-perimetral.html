@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EllaAlerta - Mapa Perimetral</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/vistas.css">
+    </head>
+    <body id="mapa-perimetral">
+        <header class="barra-lateral">
+            <header class="cabecera-seguridad">
+                <div class="grupo-logo">
+                    <img class="logo" src="../assets/img/logo.png" alt="Logo de la aplicación">
+                    <p class="nombre">EllaAlerta</p>
+                </div>
+                <span class="segmento">Seguridad Patrimonial</span>
+            </header>
+            <nav class="botones-principales">
+                <button type="button" onclick="window.location.href='bandeja-alertas.html'" class="boton-apagado">
+                    <svg class="icono"><path d="M4 19V17H6V10C6 8.62 6.41667 7.39 7.25 6.31C8.08333 5.23 9.16667 4.52667 10.5 4.2V3.5C10.5 3.08 10.6467 2.72667 10.94 2.44C11.2333 2.15334 11.5867 2.00667 12 2C12.4133 1.99334 12.7667 2.14 13.06 2.44C13.3533 2.74 13.5 3.09334 13.5 3.5V4.2C14.8333 4.53334 15.9167 5.23667 16.75 6.31C17.5833 7.38334 18 8.61334 18 10V17H20V19H4ZM12 22C11.4533 22 10.9833 21.8033 10.59 21.41C10.1967 21.0167 10 20.5467 10 20H14C14 20.5467 13.8033 21.0167 13.41 21.41C13.0167 21.8033 12.5467 22 12 22ZM8 17H16V10C16 8.9 15.61 7.96 14.83 7.18C14.05 6.4 13.1067 6.00667 12 6C10.8933 5.99334 9.95333 6.38667 9.18 7.18C8.40667 7.97334 8.01333 8.91334 8 10V17Z"/></svg>
+                    <span>Bandeja de alertas</span>
+                </button>
+                <button type="button" onclick="window.location.href='mapa-perimetral.html'" class="boton-encendido">
+                    <svg class="icono"><path d="M12.0002 18L6.00023 15.9L1.35023 17.7C1.01689 17.8333 0.706894 17.7967 0.420227 17.59C0.133561 17.3833 -0.00643939 17.1033 0.000227273 16.75V2.75C0.000227273 2.53667 0.0635607 2.34667 0.190227 2.18C0.316894 2.01333 0.486894 1.88667 0.700227 1.8L6.00023 0L12.0002 2.1L16.6502 0.3C16.9836 0.166667 17.2936 0.203333 17.5802 0.41C17.8669 0.616667 18.0069 0.896667 18.0002 1.25V15.25C18.0002 15.4633 17.9369 15.6533 17.8102 15.82C17.6836 15.9867 17.5136 16.1133 17.3002 16.2L12.0002 18ZM11.0002 15.55V3.85L7.00023 2.45V14.15L11.0002 15.55ZM13.0002 15.55L16.0002 14.55V2.7L13.0002 3.85V15.55ZM2.00023 15.3L5.00023 14.15V2.45L2.00023 3.45V15.3Z"/></svg>
+                    <span>Mapa perimetral</span>
+                </button>
+                <button type="button" onclick="window.location.href='analitica.html'" class="boton-apagado">
+                    <svg class="icono"><path d="M16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM16 16H2V2H16V16ZM4 9H6V14H4V9ZM12 4H14V14H12V4ZM8 11H10V14H8V11ZM8 7H10V9H8V7Z"/></svg>
+                    <span>Analítica y exportación</span>
+                </button>
+                <button type="button" onclick="window.location.href='historial.html'" class="boton-apagado">
+                    <svg class="icono"><path d="M18 0H6C4.9 0 4 0.9 4 2V14C4 15.1 4.9 16 6 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 14H6V2H18V14ZM2 4H0V18C0 19.1 0.9 20 2 20H16V18H2V4ZM8 5H16V7H8V5ZM8 9H16V11H8V9Z"/></svg>
+                    <span>Historial de reportes</span>
+                </button>
+                <button type="button" onclick="window.location.href='configuracion.html'" class="boton-apagado">
+                    <svg class="icono"><path d="M17.1593 10.98C17.1993 10.66 17.2293 10.34 17.2293 10C17.2293 9.66 17.1993 9.34 17.1593 9.02L19.2693 7.37C19.4593 7.22 19.5093 6.95 19.3893 6.73L17.3893 3.27C17.2993 3.11 17.1293 3.02 16.9493 3.02C16.8893 3.02 16.8293 3.03 16.7793 3.05L14.2893 4.05C13.7693 3.65 13.2093 3.32 12.5993 3.07L12.2193 0.42C12.1893 0.18 11.9793 0 11.7293 0H7.72933C7.47933 0 7.26933 0.18 7.23933 0.42L6.85933 3.07C6.24933 3.32 5.68933 3.66 5.16933 4.05L2.67933 3.05C2.61933 3.03 2.55933 3.02 2.49933 3.02C2.32933 3.02 2.15933 3.11 2.06933 3.27L0.0693316 6.73C-0.0606684 6.95 -0.000668302 7.22 0.189332 7.37L2.29933 9.02C2.25933 9.34 2.22933 9.67 2.22933 10C2.22933 10.33 2.25933 10.66 2.29933 10.98L0.189332 12.63C-0.000668302 12.78 -0.0506684 13.05 0.0693316 13.27L2.06933 16.73C2.15933 16.89 2.32933 16.98 2.50933 16.98C2.56933 16.98 2.62933 16.97 2.67933 16.95L5.16933 15.95C5.68933 16.35 6.24933 16.68 6.85933 16.93L7.23933 19.58C7.26933 19.82 7.47933 20 7.72933 20H11.7293C11.9793 20 12.1893 19.82 12.2193 19.58L12.5993 16.93C13.2093 16.68 13.7693 16.34 14.2893 15.95L16.7793 16.95C16.8393 16.97 16.8993 16.98 16.9593 16.98C17.1293 16.98 17.2993 16.89 17.3893 16.73L19.3893 13.27C19.5093 13.05 19.4593 12.78 19.2693 12.63L17.1593 10.98ZM15.1793 9.27C15.2193 9.58 15.2293 9.79 15.2293 10C15.2293 10.21 15.2093 10.43 15.1793 10.73L15.0393 11.86L15.9293 12.56L17.0093 13.4L16.3093 14.61L15.0393 14.1L13.9993 13.68L13.0993 14.36C12.6693 14.68 12.2593 14.92 11.8493 15.09L10.7893 15.52L10.6293 16.65L10.4293 18H9.02933L8.83933 16.65L8.67933 15.52L7.61933 15.09C7.18933 14.91 6.78933 14.68 6.38933 14.38L5.47933 13.68L4.41933 14.11L3.14933 14.62L2.44933 13.41L3.52933 12.57L4.41933 11.87L4.27933 10.74C4.24933 10.43 4.22933 10.2 4.22933 10C4.22933 9.8 4.24933 9.57 4.27933 9.27L4.41933 8.14L3.52933 7.44L2.44933 6.6L3.14933 5.39L4.41933 5.9L5.45933 6.32L6.35933 5.64C6.78933 5.32 7.19933 5.08 7.60933 4.91L8.66933 4.48L8.82933 3.35L9.02933 2H10.4193L10.6093 3.35L10.7693 4.48L11.8293 4.91C12.2593 5.09 12.6593 5.32 13.0593 5.62L13.9693 6.32L15.0293 5.89L16.2993 5.38L16.9993 6.59L15.9293 7.44L15.0393 8.14L15.1793 9.27ZM9.72933 6C7.51933 6 5.72933 7.79 5.72933 10C5.72933 12.21 7.51933 14 9.72933 14C11.9393 14 13.7293 12.21 13.7293 10C13.7293 7.79 11.9393 6 9.72933 6ZM9.72933 12C8.62933 12 7.72933 11.1 7.72933 10C7.72933 8.9 8.62933 8 9.72933 8C10.8293 8 11.7293 8.9 11.7293 10C11.7293 11.1 10.8293 12 9.72933 12Z"/></svg>
+                    <span>Configuraciones</span>
+                </button>
+            </nav>
+            <nav class="botones-secundarios">
+                <button type="button" onclick="window.location.href='perfil.html'" class="boton-perfil">
+                    <span class="avatar-circulo">YL</span>
+                    <div class="info-seguridad">
+                        <span class="nombre-seguridad">Seguridad Yeison Leon</span>
+                        <span class="sede-seguridad">UPC San Miguel</span>
+                    </div>
+                    <span class="flecha">&gt;</span>
+                </button>
+                <button type="button" onclick="alert('Cerrando sesión...')" class="boton-neutro">
+                    <svg class="icono"><path d="M14 5L12.59 6.41L14.17 8H6V10H14.17L12.59 11.58L14 13L18 9L14 5ZM2 2H9V0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H9V16H2V2Z" fill="#BBD0ED"/></svg>
+                    <span>Cerrar Sesión</span>
+                </button>
+            </nav>
+        </header>
+
+        <main class="cuerpo-bandeja">
+            <header class="contendor-encabezado-seguridad">
+                <div class="texto-seguridad">
+                    <span>Seguridad Patrimonial</span>
+                    <h2>Mapa perimetral de zonas críticas</h2>
+                    <p>Vista de riesgo perimetral</p>
+                </div>
+                <div class="acciones-encabezado">
+                    <div class="selector-campus">
+                        <svg class="icono"><path d="M12.0002 18L6.00023 15.9L1.35023 17.7C1.01689 17.8333 0.706894 17.7967 0.420227 17.59C0.133561 17.3833 -0.00643939 17.1033 0.000227273 16.75V2.75C0.000227273 2.53667 0.0635607 2.34667 0.190227 2.18C0.316894 2.01333 0.486894 1.88667 0.700227 1.8L6.00023 0L12.0002 2.1L16.6502 0.3C16.9836 0.166667 17.2936 0.203333 17.5802 0.41C17.8669 0.616667 18.0069 0.896667 18.0002 1.25V15.25C18.0002 15.4633 17.9369 15.6533 17.8102 15.82C17.6836 15.9867 17.5136 16.1133 17.3002 16.2L12.0002 18ZM11.0002 15.55V3.85L7.00023 2.45V14.15L11.0002 15.55ZM13.0002 15.55L16.0002 14.55V2.7L13.0002 3.85V15.55ZM2.00023 15.3L5.00023 14.15V2.45L2.00023 3.45V15.3Z"/></svg>
+                        <select id="campus" class="campus-upc" required>
+                            <option value="san-miguel" selected>Campus UPC San Miguel</option>
+                            <option value="san-isidro">Campus UPC San Isidro</option>
+                            <option value="monterico">Campus UPC Monterico</option>
+                            <option value="villa">Campus UPC Villa</option>
+                        </select>
+                    </div>
+                    <button class="boton-filtro-oscuro">
+                        <svg class="icono"><path d="M0 0V1.66667L5.83333 8.33333V13.3333H9.16667V8.33333L15 1.66667V0H0ZM7.5 7.7L2.30833 1.66667H12.6917L7.5 7.7Z"/></svg>
+                        <span>Filtrar zonas</span>
+                    </button>
+                </div>
+            </header>
+
+            <section class="tarjeta-mapa-completo">
+                <div class="contenedor-mapa">
+                    <div id="mapa-zonas"></div>
+                    <div class="panel-filtros">
+                        <h3>Filtrar zonas</h3>
+                        <div class="grupo-filtro">
+                            <label for="fecha">Rango fecha:</label>
+                            <select id="fecha" class="selector-filtro" required>
+                                <option value="todo" selected>Todo</option>
+                                <option value="dia">Ultimo dia</option>
+                                <option value="semana">Ultima semana</option>
+                                <option value="mes">Ultimo mes</option>
+                            </select>
+                        </div>
+                        <div class="grupo-filtro">
+                            <label for="hora">Franja horaria:</label>
+                            <select id="hora" class="selector-filtro" required>
+                                <option value="todo" selected>Todo</option>
+                                <option value="manana">mañana</option>
+                                <option value="tarde">tarde</option>
+                                <option value="noche">noches</option>
+                            </select>
+                        </div>
+                        <div class="grupo-filtro">
+                            <label for="incidente">Tipo de incidente:</label>
+                            <select id="incidente" class="selector-filtro" required>
+                                <option value="todo" selected>Todo</option>
+                                <option value="Robo">Robo</option>
+                                <option value="Acoso">Acoso</option>
+                            </select>
+                        </div>
+                        <button class="aplicar-filtro">Aplicar filtros</button>
+                    </div>
+                </div>
+                <footer class="leyenda-mapa">
+                    <div class="leyenda-izquierda">
+                        <span class="leyenda-titulo">Nivel de riesgo</span>
+                        <span class="item-leyenda"><span class="punto p-rojo"></span> Zona Alta</span>
+                        <span class="item-leyenda"><span class="punto p-amarillo"></span> Zona Media</span>
+                        <span class="item-leyenda"><span class="punto p-verde"></span> Zona Segura</span>
+                    </div>
+                    <div class="leyenda-derecha">
+                        <span>Últimos 7 días • Noche</span>
+                    </div>
+                </footer>
+            </section>
+        </main>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

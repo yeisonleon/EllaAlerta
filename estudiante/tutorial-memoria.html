@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EllaAlerta - Alerta SOS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/styles-segmento-estudiante.css">
+    </head>
+    <body>
+        <div class="entorno-estudiante">
+            <!-- MENÚ LATERAL (Se repite en todas las pantallas) -->
+            <div id="fondoMenu" class="fondo-menu"></div>
+            <aside class="barra-lateral" id="barraLateral">
+                <div class="barra-lateral-superior">
+                    <div class="marca-encabezado">
+                        <div class="marca-titulo">
+                            <img class="marca-logo" src="../assets/img/logo.png" alt="Logo">
+                            <span>EllaAlerta</span>
+                        </div>
+                        <span class="marca-insignia">ENTORNO ESTUDIANTE</span>
+                    </div>
+
+                    <!-- OJO: Aquí se activa el fondo claro según la página -->
+                    <a href="alerta.html" class="btn-sos-lateral activo" style="background-color: var(--alert-red-dark); box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polygon points="12 2 22 12 12 22 2 12 12 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                        <span>ALERTA SOS</span>
+                    </a>
+
+                    <nav class="barra-lateral-nav" aria-label="Navegación principal">
+                        <a href="rutas.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+                                <span>Rutas Seguras</span>
+                            </span>
+                        </a>
+                        <a href="reporte.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                                <span>Reporte Rápido</span>
+                            </span>
+                        </a>
+                        <a href="red-confianza.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                <span>Mi Red de Confianza</span>
+                            </span>
+                            <span class="nav-contador" id="insigniaContactosLateral">2</span>
+                        </a>
+                        <a href="historial.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>
+                                <span>Historial</span>
+                            </span>
+                        </a>
+                        <a href="canales-ayuda.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span>Canales de Ayuda</span>
+                            </span>
+                        </a>
+                        <a href="configuracion.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                                <span>Configuración y Discreción</span>
+                            </span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="barra-lateral-pie">
+                    <a href="perfil.html" class="usuario-perfil-enlace">
+                        <div class="usuario-avatar">D</div>
+                        <div>
+                            <div class="usuario-nombre">Daniela</div>
+                            <div class="usuario-campus">UPC San Miguel</div>
+                        </div>
+                    </a>
+                    <button type="button" id="btnCerrarSesion" class="btn-cerrar-sesion">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                        <span>Cerrar sesión</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- ÁREA DE TRABAJO DONDE SE PEGARÁN LAS OTRAS PANTALLAS -->
+            <main class="area-trabajo">
+                <div class="barra-superior">
+                    <button type="button" id="btnMenu" class="btn-menu" aria-label="Mostrar u ocultar menú" aria-controls="barraLateral" aria-expanded="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+                    </button>
+                    <span class="barra-superior-marca">EllaAlerta</span>
+                </div>
+
+                <header class="pagina-encabezado">
+                    <div>
+                        <div class="pagina-antetitulo">Configuración y Discreción</div>
+                        <h1 class="pagina-titulo">Tutorial de memoria muscular</h1>
+                        <p class="pagina-subtitulo">Practica tu gesto de alerta discreta hasta lograr 3 aciertos seguidos.</p>
+                    </div>
+                    <a href="configuracion.html" class="btn-suave">
+                        <span>Salir del tutorial</span>
+                    </a>
+                </header>
+
+                <section class="cuadricula-2-col-igual">
+                    <!-- Panel izquierdo -->
+                    <div class="panel-tarjeta">
+                        <div class="simulacion-banner">
+                            <strong>▶ Modo simulación</strong><br />
+                            No se envía ninguna alerta ni se notifica a tu red
+                        </div>
+
+                        <div id="vistaPracticaEnCurso" class="estado-practica-contenedor">
+                            <div class="estado-practica-centro">
+                                <div class="estado-practica-titulo">Aciertos seguidos</div>
+                                <div class="racha-puntos-fila" id="puntosRacha">
+                                    <span class="racha-circulo">✓</span>
+                                    <span class="racha-circulo">✓</span>
+                                    <span class="racha-circulo">✓</span>
+                                </div>
+                                <div id="textoContadorRacha" class="estado-practica-contador">0 de 3 para completar</div>
+                            </div>
+
+                            <div class="caja-practica-gesto">
+                                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#293866" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path></svg>
+                                <div class="practica-gesto-titulo">Ejecuta tu patrón</div>
+                                <div class="practica-gesto-objetivo" id="pistaPatronObjetivo">Patrón objetivo: vol - · vol + · vol -</div>
+
+                                <div class="teclas-chips-cuadricula cuadricula-completa">
+                                    <button type="button" class="tecla-pildora btn-tecla btn-tecla-simulada" data-key="vol +">vol +</button>
+                                    <button type="button" class="tecla-pildora btn-tecla btn-tecla-simulada" data-key="vol -">vol -</button>
+                                    <button type="button" class="tecla-pildora btn-tecla btn-tecla-simulada" data-key="Encendido">Encendido</button>
+                                </div>
+
+                                <div class="teclas-chips-cuadricula cuadricula-completa" id="ranurasIntento">
+                                    <div class="ranura-pildora"></div>
+                                    <div class="ranura-pildora"></div>
+                                    <div class="ranura-pildora"></div>
+                                </div>
+                            </div>
+
+                            <div id="avisoIntentoIncorrecto" class="aviso-amarillo-caja pantalla-oculta">
+                                <strong>Intento no contado</strong><br />Fue un patrón distinto al configurado. Presiona los botones en el mismo orden y sin pausas largas.
+                            </div>
+                        </div>
+
+                        <div id="vistaPracticaCompletada" class="estado-completado-contenedor" style="display:none;">
+                            <div class="exito-check-anillo">
+                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <div class="estado-completado-titulo">Entrenamiento terminado</div>
+                            <div class="racha-puntos-fila">
+                                <span class="racha-circulo hecho">✓</span>
+                                <span class="racha-circulo hecho">✓</span>
+                                <span class="racha-circulo hecho">✓</span>
+                            </div>
+                            <div class="estado-completado-subtitulo">3 de 3 aciertos seguidos</div>
+
+                            <a href="configuracion.html" class="btn-lavanda-completo" style="text-decoration:none;">Listo</a>
+                            <button type="button" id="btnRepetirEntrenamiento" class="btn-suave completo">Repetir entrenamiento</button>
+                        </div>
+                    </div>
+
+                    <!-- Panel derecho -->
+                    <div class="panel-tarjeta">
+                        <div>
+                            <h2 class="panel-tarjeta-titulo">Guía de entrenamiento</h2>
+                            <p class="panel-tarjeta-sub">Consejos para memorizar tu combinación SOS</p>
+                        </div>
+                        <div class="tarjeta-informativa-caja">
+                            <p><strong>1. Mantén el ritmo:</strong> Presiona las 3 teclas de forma continua sin pausas mayores a 2 segundos.</p>
+                            <p class="tarjeta-informativa-parrafo"><strong>2. Reinicio automático:</strong> Si te equivocas, el contador volverá a 0 para reforzar la memoria muscular.</p>
+                            <p class="tarjeta-informativa-parrafo"><strong>3. Sin alertas reales:</strong> Mientras estés aquí, ninguna notificación saldrá hacia Seguridad UPC.</p>
+                        </div>
+                        <a href="configuracion.html" class="btn-suave btn-margen-auto" style="text-decoration:none; text-align:center;">Salir del tutorial</a>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+        <div id="notificacionGlobal" class="notificacion"></div>
+        <script src="../js/app-segmento-estudiante.js"></script>
+    </body>
+</html>

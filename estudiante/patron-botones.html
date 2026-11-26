@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EllaAlerta - Alerta SOS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/styles-segmento-estudiante.css">
+    </head>
+    <body>
+        <div class="entorno-estudiante">
+            <!-- MENÚ LATERAL (Se repite en todas las pantallas) -->
+            <div id="fondoMenu" class="fondo-menu"></div>
+            <aside class="barra-lateral" id="barraLateral">
+                <div class="barra-lateral-superior">
+                    <div class="marca-encabezado">
+                        <div class="marca-titulo">
+                            <img class="marca-logo" src="../assets/img/logo.png" alt="Logo">
+                            <span>EllaAlerta</span>
+                        </div>
+                        <span class="marca-insignia">ENTORNO ESTUDIANTE</span>
+                    </div>
+
+                    <!-- OJO: Aquí se activa el fondo claro según la página -->
+                    <a href="alerta.html" class="btn-sos-lateral activo" style="background-color: var(--alert-red-dark); box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polygon points="12 2 22 12 12 22 2 12 12 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                        <span>ALERTA SOS</span>
+                    </a>
+
+                    <nav class="barra-lateral-nav" aria-label="Navegación principal">
+                        <a href="rutas.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+                                <span>Rutas Seguras</span>
+                            </span>
+                        </a>
+                        <a href="reporte.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                                <span>Reporte Rápido</span>
+                            </span>
+                        </a>
+                        <a href="red-confianza.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                <span>Mi Red de Confianza</span>
+                            </span>
+                            <span class="nav-contador" id="insigniaContactosLateral">2</span>
+                        </a>
+                        <a href="historial.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>
+                                <span>Historial</span>
+                            </span>
+                        </a>
+                        <a href="canales-ayuda.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span>Canales de Ayuda</span>
+                            </span>
+                        </a>
+                        <a href="configuracion.html" class="enlace-nav">
+                            <span class="enlace-nav-izquierda">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                                <span>Configuración y Discreción</span>
+                            </span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="barra-lateral-pie">
+                    <a href="perfil.html" class="usuario-perfil-enlace">
+                        <div class="usuario-avatar">D</div>
+                        <div>
+                            <div class="usuario-nombre">Daniela</div>
+                            <div class="usuario-campus">UPC San Miguel</div>
+                        </div>
+                    </a>
+                    <button type="button" id="btnCerrarSesion" class="btn-cerrar-sesion">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                        <span>Cerrar sesión</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- ÁREA DE TRABAJO DONDE SE PEGARÁN LAS OTRAS PANTALLAS -->
+            <main class="area-trabajo">
+                <div class="barra-superior">
+                    <button type="button" id="btnMenu" class="btn-menu" aria-label="Mostrar u ocultar menú" aria-controls="barraLateral" aria-expanded="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+                    </button>
+                    <span class="barra-superior-marca">EllaAlerta</span>
+                </div>
+
+                <header class="pagina-encabezado">
+                    <div>
+                        <div class="pagina-antetitulo">Configuración y Discreción</div>
+                        <h1 class="pagina-titulo">Patrón de botones físicos</h1>
+                        <p class="pagina-subtitulo">Define la combinación de teclas físicas para disparar una alerta silenciosa.</p>
+                    </div>
+                    <a href="configuracion.html" class="btn-suave">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span>Volver a Configuración</span>
+                    </a>
+                </header>
+
+                <section class="cuadricula-2-col-igual">
+                    <div class="panel-tarjeta">
+                        <div>
+                            <h2 class="panel-tarjeta-titulo">Patrones predefinidos</h2>
+                            <p class="panel-tarjeta-sub">Selecciona una combinación rápida o arma una personalizada</p>
+                        </div>
+
+                        <div class="preajuste-caja" data-preset="1" data-seq="vol +,vol +,vol -">
+                            <div class="preajuste-encabezado">
+                                <span class="radio-punto"></span>
+                                <span>Patrón 1</span>
+                            </div>
+                            <div class="teclas-chips-cuadricula">
+                                <span class="tecla-pildora">vol +</span>
+                                <span class="tecla-pildora">vol +</span>
+                                <span class="tecla-pildora">vol -</span>
+                            </div>
+                        </div>
+
+                        <div class="preajuste-caja seleccionado" data-preset="2" data-seq="vol -,vol +,vol -">
+                            <div class="preajuste-encabezado">
+                                <span class="radio-punto"></span>
+                                <span>Patrón 2</span>
+                            </div>
+                            <div class="teclas-chips-cuadricula">
+                                <span class="tecla-pildora">vol -</span>
+                                <span class="tecla-pildora">vol +</span>
+                                <span class="tecla-pildora">vol -</span>
+                            </div>
+                        </div>
+
+                        <div class="preajuste-caja" data-preset="3" data-seq="Encendido,Encendido,Encendido">
+                            <div class="preajuste-encabezado">
+                                <span class="radio-punto"></span>
+                                <span>Patrón 3</span>
+                            </div>
+                            <div class="teclas-chips-cuadricula">
+                                <span class="tecla-pildora">Encendido</span>
+                                <span class="tecla-pildora">Encendido</span>
+                                <span class="tecla-pildora">Encendido</span>
+                            </div>
+                        </div>
+
+                        <div class="panel-seccion-inferior">
+                            <div class="panel-seccion-encabezado">
+                                <span class="panel-tarjeta-titulo panel-titulo-md">Personalizar patrón</span>
+                                <button type="button" id="btnBorrarTecla" class="btn-suave btn-sm">Borrar último</button>
+                            </div>
+                            <div class="teclas-chips-cuadricula">
+                                <button type="button" class="tecla-pildora btn-tecla btn-agregar-tecla" data-key="vol +">vol +</button>
+                                <button type="button" class="tecla-pildora btn-tecla btn-agregar-tecla" data-key="vol -">vol -</button>
+                                <button type="button" class="tecla-pildora btn-tecla btn-agregar-tecla" data-key="Encendido">Encendido</button>
+                            </div>
+                            <div class="teclas-chips-cuadricula" id="filaRanurasPersonalizadas">
+                                <div class="ranura-pildora lleno">vol -</div>
+                                <div class="ranura-pildora"></div>
+                                <div class="ranura-pildora"></div>
+                            </div>
+                        </div>
+                        <button type="button" id="btnGuardarPatron" class="btn-lavanda-completo">Guardar Patrón</button>
+                    </div>
+
+                    <div class="panel-tarjeta">
+                        <div>
+                            <h2 class="panel-tarjeta-titulo">Cómo funciona</h2>
+                            <p class="panel-tarjeta-sub">Reglas de detección discreta en tu teléfono</p>
+                        </div>
+                        <div class="tarjeta-informativa-caja">
+                            <p>Se detecta con la <strong>pantalla bloqueada y sin sonido</strong>.</p>
+                            <p class="tarjeta-informativa-parrafo">Debes completarlo dentro de un tiempo definido.</p>
+                            <p class="tarjeta-informativa-parrafo">Tras completarlo, tienes <strong>5 segundos para cancelar</strong>.</p>
+                        </div>
+                        <a href="tutorial-memoria.html" class="btn-azul completo btn-margen-auto">
+                            Practicar este patrón en el Tutorial de Memoria Muscular
+                        </a>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+        <div id="notificacionGlobal" class="notificacion"></div>
+        <script src="../js/app-segmento-estudiante.js"></script>
+    </body>
+</html>

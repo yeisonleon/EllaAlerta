@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EllaAlerta - Entrenamiento</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/styles-segmento-estudiante.css">
+    </head>
+    <body>
+        <div class="entrenamiento-inicial" id="primero" style="min-height: 100vh;">
+            <header class="entrenamiento-encabezado">
+                <div>
+                    <h2 class="entrenamiento-titulo">Entrena tu alerta discreta</h2>
+                    <p class="entrenamiento-subtitulo">Practica para activar el SOS por instinto, sin mirar la pantalla.</p>
+                </div>
+                <!-- Enlace a la primera pantalla del sistema -->
+                <button onclick="window.location.href='rutas.html'" class="btn-suave">Omitir</button>
+            </header>
+            <menu class="panel-entrenamiento">
+                <span class="encabezado-entrenamiento-pildora">Modo Simulación · Sin alertas reales</span>
+                <img src="../assets/img/celular.svg" id="celular" alt="Celular">
+                <p class="texto-posterior">Mantén presionado el botón de bajar volumen por 3 segundos dos veces seguidas</p>
+                <div class="contador-texto">Aciertos: <strong id="aciertos-num">0</strong> / 3</div>
+                <div class="capsulas-entrenamiento">
+                    <div class="capsula" id="cap-1"></div>
+                    <div class="capsula" id="cap-2"></div>
+                    <div class="capsula" id="cap-3"></div>
+                </div>
+                <button type="button" id="btn-vibracion" class="btn-vibracion">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line><path d="M3 8v8"></path><path d="M21 8v8"></path></svg>
+                    <span>Vibración sutil de prueba detectada</span>
+                </button>
+                <button type="button" onclick="window.location.href='rutas.html'" id="btn-continuar" class="btn-continuar oculto">
+                    <span>Continuar al mapa</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            </menu>
+        </div>
+        <script src="../js/app-segmento-estudiante.js"></script>
+    </body>
+</html>

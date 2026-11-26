@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EllaAlerta - Analítica y Exportación</title>
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/vistas.css">
+    </head>
+    <body id="analitica-exportacion">
+        <header class="barra-lateral">
+            <header class="cabecera-seguridad">
+                <div class="grupo-logo">
+                    <img class="logo" src="../assets/img/logo.png" alt="Logo de la aplicación">
+                    <p class="nombre">EllaAlerta</p>
+                </div>
+                <span class="segmento">Seguridad Patrimonial</span>
+            </header>
+            <nav class="botones-principales">
+                <button type="button" onclick="window.location.href='bandeja-alertas.html'" class="boton-apagado">
+                    <svg class="icono"><path d="M4 19V17H6V10C6 8.62 6.41667 7.39 7.25 6.31C8.08333 5.23 9.16667 4.52667 10.5 4.2V3.5C10.5 3.08 10.6467 2.72667 10.94 2.44C11.2333 2.15334 11.5867 2.00667 12 2C12.4133 1.99334 12.7667 2.14 13.06 2.44C13.3533 2.74 13.5 3.09334 13.5 3.5V4.2C14.8333 4.53334 15.9167 5.23667 16.75 6.31C17.5833 7.38334 18 8.61334 18 10V17H20V19H4ZM12 22C11.4533 22 10.9833 21.8033 10.59 21.41C10.1967 21.0167 10 20.5467 10 20H14C14 20.5467 13.8033 21.0167 13.41 21.41C13.0167 21.8033 12.5467 22 12 22ZM8 17H16V10C16 8.9 15.61 7.96 14.83 7.18C14.05 6.4 13.1067 6.00667 12 6C10.8933 5.99334 9.95333 6.38667 9.18 7.18C8.40667 7.97334 8.01333 8.91334 8 10V17Z"/></svg>
+                    <span>Bandeja de alertas</span>
+                </button>
+                <button type="button" onclick="window.location.href='mapa-perimetral.html'" class="boton-apagado">
+                    <svg class="icono"><path d="M12.0002 18L6.00023 15.9L1.35023 17.7C1.01689 17.8333 0.706894 17.7967 0.420227 17.59C0.133561 17.3833 -0.00643939 17.1033 0.000227273 16.75V2.75C0.000227273 2.53667 0.0635607 2.34667 0.190227 2.18C0.316894 2.01333 0.486894 1.88667 0.700227 1.8L6.00023 0L12.0002 2.1L16.6502 0.3C16.9836 0.166667 17.2936 0.203333 17.5802 0.41C17.8669 0.616667 18.0069 0.896667 18.0002 1.25V15.25C18.0002 15.4633 17.9369 15.6533 17.8102 15.82C17.6836 15.9867 17.5136 16.1133 17.3002 16.2L12.0002 18ZM11.0002 15.55V3.85L7.00023 2.45V14.15L11.0002 15.55ZM13.0002 15.55L16.0002 14.55V2.7L13.0002 3.85V15.55ZM2.00023 15.3L5.00023 14.15V2.45L2.00023 3.45V15.3Z"/></svg>
+                    <span>Mapa perimetral</span>
+                </button>
+                <button type="button" onclick="window.location.href='analitica.html'" class="boton-encendido">
+                    <svg class="icono"><path d="M16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM16 16H2V2H16V16ZM4 9H6V14H4V9ZM12 4H14V14H12V4ZM8 11H10V14H8V11ZM8 7H10V9H8V7Z"/></svg>
+                    <span>Analítica y exportación</span>
+                </button>
+                <button type="button" onclick="window.location.href='historial.html'" class="boton-apagado">
+                    <svg class="icono"><path d="M18 0H6C4.9 0 4 0.9 4 2V14C4 15.1 4.9 16 6 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 14H6V2H18V14ZM2 4H0V18C0 19.1 0.9 20 2 20H16V18H2V4ZM8 5H16V7H8V5ZM8 9H16V11H8V9Z"/></svg>
+                    <span>Historial de reportes</span>
+                </button>
+                <button type="button" onclick="window.location.href='configuracion.html'" class="boton-apagado">
+                    <svg class="icono"><path d="M17.1593 10.98C17.1993 10.66 17.2293 10.34 17.2293 10C17.2293 9.66 17.1993 9.34 17.1593 9.02L19.2693 7.37C19.4593 7.22 19.5093 6.95 19.3893 6.73L17.3893 3.27C17.2993 3.11 17.1293 3.02 16.9493 3.02C16.8893 3.02 16.8293 3.03 16.7793 3.05L14.2893 4.05C13.7693 3.65 13.2093 3.32 12.5993 3.07L12.2193 0.42C12.1893 0.18 11.9793 0 11.7293 0H7.72933C7.47933 0 7.26933 0.18 7.23933 0.42L6.85933 3.07C6.24933 3.32 5.68933 3.66 5.16933 4.05L2.67933 3.05C2.61933 3.03 2.55933 3.02 2.49933 3.02C2.32933 3.02 2.15933 3.11 2.06933 3.27L0.0693316 6.73C-0.0606684 6.95 -0.000668302 7.22 0.189332 7.37L2.29933 9.02C2.25933 9.34 2.22933 9.67 2.22933 10C2.22933 10.33 2.25933 10.66 2.29933 10.98L0.189332 12.63C-0.000668302 12.78 -0.0506684 13.05 0.0693316 13.27L2.06933 16.73C2.15933 16.89 2.32933 16.98 2.50933 16.98C2.56933 16.98 2.62933 16.97 2.67933 16.95L5.16933 15.95C5.68933 16.35 6.24933 16.68 6.85933 16.93L7.23933 19.58C7.26933 19.82 7.47933 20 7.72933 20H11.7293C11.9793 20 12.1893 19.82 12.2193 19.58L12.5993 16.93C13.2093 16.68 13.7693 16.34 14.2893 15.95L16.7793 16.95C16.8393 16.97 16.8993 16.98 16.9593 16.98C17.1293 16.98 17.2993 16.89 17.3893 16.73L19.3893 13.27C19.5093 13.05 19.4593 12.78 19.2693 12.63L17.1593 10.98ZM15.1793 9.27C15.2193 9.58 15.2293 9.79 15.2293 10C15.2293 10.21 15.2093 10.43 15.1793 10.73L15.0393 11.86L15.9293 12.56L17.0093 13.4L16.3093 14.61L15.0393 14.1L13.9993 13.68L13.0993 14.36C12.6693 14.68 12.2593 14.92 11.8493 15.09L10.7893 15.52L10.6293 16.65L10.4293 18H9.02933L8.83933 16.65L8.67933 15.52L7.61933 15.09C7.18933 14.91 6.78933 14.68 6.38933 14.38L5.47933 13.68L4.41933 14.11L3.14933 14.62L2.44933 13.41L3.52933 12.57L4.41933 11.87L4.27933 10.74C4.24933 10.43 4.22933 10.2 4.22933 10C4.22933 9.8 4.24933 9.57 4.27933 9.27L4.41933 8.14L3.52933 7.44L2.44933 6.6L3.14933 5.39L4.41933 5.9L5.45933 6.32L6.35933 5.64C6.78933 5.32 7.19933 5.08 7.60933 4.91L8.66933 4.48L8.82933 3.35L9.02933 2H10.4193L10.6093 3.35L10.7693 4.48L11.8293 4.91C12.2593 5.09 12.6593 5.32 13.0593 5.62L13.9693 6.32L15.0293 5.89L16.2993 5.38L16.9993 6.59L15.9293 7.44L15.0393 8.14L15.1793 9.27ZM9.72933 6C7.51933 6 5.72933 7.79 5.72933 10C5.72933 12.21 7.51933 14 9.72933 14C11.9393 14 13.7293 12.21 13.7293 10C13.7293 7.79 11.9393 6 9.72933 6ZM9.72933 12C8.62933 12 7.72933 11.1 7.72933 10C7.72933 8.9 8.62933 8 9.72933 8C10.8293 8 11.7293 8.9 11.7293 10C11.7293 11.1 10.8293 12 9.72933 12Z"/></svg>
+                    <span>Configuraciones</span>
+                </button>
+            </nav>
+            <nav class="botones-secundarios">
+                <button type="button" onclick="window.location.href='perfil.html'" class="boton-perfil">
+                    <span class="avatar-circulo">YL</span>
+                    <div class="info-seguridad">
+                        <span class="nombre-seguridad">Seguridad Yeison Leon</span>
+                        <span class="sede-seguridad">UPC San Miguel</span>
+                    </div>
+                    <span class="flecha">&gt;</span>
+                </button>
+                <button type="button" onclick="alert('Cerrando sesión...')" class="boton-neutro">
+                    <svg class="icono"><path d="M14 5L12.59 6.41L14.17 8H6V10H14.17L12.59 11.58L14 13L18 9L14 5ZM2 2H9V0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H9V16H2V2Z" fill="#BBD0ED"/></svg>
+                    <span>Cerrar Sesión</span>
+                </button>
+            </nav>
+        </header>
+
+        <main class="cuerpo-bandeja">
+            <header class="contendor-encabezado-seguridad">
+                <div class="texto-seguridad">
+                    <span>Seguridad Patrimonial</span>
+                    <h2>Analítica y Exportación</h2>
+                    <p>Registros anonimizados del campus.</p>
+                </div>
+                <div class="acciones-encabezado">
+                    <div class="anuncio-protegido">
+                        <svg class="icono"><path d="M6.75 0L0 3V7.5C0 11.6625 2.88 15.555 6.75 16.5C10.62 15.555 13.5 11.6625 13.5 7.5V3L6.75 0ZM12 7.5C12 10.89 9.765 14.0175 6.75 14.9475C3.735 14.0175 1.5 10.89 1.5 7.5V3.975L6.75 1.6425L12 3.975V7.5ZM5.25 9.1275L3.3075 7.1925L2.25 8.25L5.25 11.25L11.25 5.25L10.1925 4.185L5.25 9.1275Z"/></svg>
+                        <span>Identidad protegida: Datos anonimos</span>
+                    </div>
+                    <button class="boton-filtro-oscuro">
+                        <svg class="icono"><path d="M11.6667 5H8.33333V0H3.33333V5H0L5.83333 10.8333L11.6667 5ZM5 6.66667V1.66667H6.66667V6.66667H7.64167L5.83333 8.475L4.025 6.66667H5ZM0 12.5V14.1667H11.6667V12.5H0Z"/></svg>
+                        <span>Exportar reporte en PDF</span>
+                    </button>
+                </div>
+            </header>
+
+            <section class="contenedor-bloque-analitica">
+                <article class="tarjeta-metrica">
+                    <div class="metrica-encabezado">
+                        <span>Total de incidentes (Mes)</span>
+                        <svg class="icono"><path d="M16 2H11.82C11.4 0.84 10.3 0 9 0C7.7 0 6.6 0.84 6.18 2H2C0.9 2 0 2.9 0 4V18C0 19.1 0.9 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM9 2C9.55 2 10 2.45 10 3C10 3.55 9.55 4 9 4C8.45 4 8 3.55 8 3C8 2.45 8.45 2 9 2ZM16 18H2V4H4V7H14V4H16V18ZM4 9H14V11H4V9ZM4 13H11V15H4V13Z"/></svg>
+                    </div>
+                    <div class="metrica-valor">24</div>
+                </article>
+                <article class="tarjeta-metrica">
+                    <div class="metrica-encabezado">
+                        <span>Zona más crítica</span>
+                        <svg class="icono"><path d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 16.88C4.67 13.78 2 9.45 2 7C2 5.67392 2.52678 4.40215 3.46447 3.46447C4.40215 2.52678 5.67392 2 7 2C8.32608 2 9.59785 2.52678 10.5355 3.46447C11.4732 4.40215 12 5.67392 12 7C12 9.45 9.33 13.78 7 16.88ZM7 4C6.20435 4 5.44129 4.31607 4.87868 4.87868C4.31607 5.44129 4 6.20435 4 7C4 7.79565 4.31607 8.55871 4.87868 9.12132C5.44129 9.68393 6.20435 10 7 10C7.79565 10 8.55871 9.68393 9.12132 9.12132C9.68393 8.55871 10 7.79565 10 7C10 6.20435 9.68393 5.44129 9.12132 4.87868C8.55871 4.31607 7.79565 4 7 4ZM7 8C6.73478 8 6.48043 7.89464 6.29289 7.70711C6.10536 7.51957 6 7.26522 6 7C6 6.73478 6.10536 6.48043 6.29289 6.29289C6.48043 6.10536 6.73478 6 7 6C7.26522 6 7.51957 6.10536 7.70711 6.29289C7.89464 6.48043 8 6.73478 8 7C8 7.26522 7.89464 7.51957 7.70711 7.70711C7.51957 7.89464 7.26522 8 7 8Z"/></svg>
+                    </div>
+                    <div class="metrica-valor">Av. La Marina</div>
+                </article>
+                <article class="tarjeta-metrica">
+                    <div class="metrica-encabezado">
+                        <span>Hora pico</span>
+                        <svg class="icono"><path d="M10 0C7.34784 0 4.8043 1.05357 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C4.8043 18.9464 7.34784 20 10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0ZM10 18C7.87827 18 5.84344 17.1571 4.34315 15.6569C2.84285 14.1566 2 12.1217 2 10C2 7.87827 2.84285 5.84344 4.34315 4.34315C5.84344 2.84285 7.87827 2 10 2C12.1217 2 14.1566 2.84285 15.6569 4.34315C17.1571 5.84344 18 7.87827 18 10C18 12.1217 17.1571 14.1566 15.6569 15.6569C14.1566 17.1571 12.1217 18 10 18ZM10.5 5H9V11L14.25 14.15L15 12.92L10.5 10.25V5Z"/></svg>
+                    </div>
+                    <div class="metrica-valor">20:00 -23:00</div>
+                </article>
+            </section>
+
+            <section class="contenedor-bloque-analitica tabla-contenedor">
+                <header class="cabecera-lista">
+                    <div>
+                        <h3>Casos anonimizados</h3>
+                        <p>Registros sin datos identificación personal</p>
+                    </div>
+                    <span class="conteo-casos">N registros</span>
+                </header>
+                <div class="titulos-columnas">
+                    <span class="col-caso">CASO</span>
+                    <span class="col-incidente">INCIDENTE</span>
+                    <span class="col-ubicacion">UBICACIÓN</span>
+                    <span class="col-fecha">FECHA</span>
+                    <span class="col-hora">HORA</span>
+                    <span class="col-zona">ZONA</span>
+                </div>
+                <div class="lista-filas-casos">
+                    <article class="fila-caso">
+                        <span class="col-caso font-bold">Caso #104</span>
+                        <span class="col-incidente">Acoso</span>
+                        <span class="col-ubicacion">Av. La Marina</span>
+                        <span class="col-fecha">15 Nov</span>
+                        <span class="col-hora">21:40</span>
+                        <div class="col-zona">
+                            <span class="fondo-zona fondo-zona-roja">Zona Roja</span>
+                        </div>
+                    </article>
+                    <article class="fila-caso">
+                        <span class="col-caso font-bold">Caso #103</span>
+                        <span class="col-incidente">Poca luz</span>
+                        <span class="col-ubicacion">Ca. Escardó</span>
+                        <span class="col-fecha">12 Nov</span>
+                        <span class="col-hora">20:15</span>
+                        <div class="col-zona">
+                            <span class="fondo-zona fondo-zona-amarilla">Zona Amarilla</span>
+                        </div>
+                    </article>
+                    <article class="fila-caso">
+                        <span class="col-caso font-bold">Caso #102</span>
+                        <span class="col-incidente">Seguimiento</span>
+                        <span class="col-ubicacion">Paradero</span>
+                        <span class="col-fecha">08 Nov</span>
+                        <span class="col-hora">22:05</span>
+                        <div class="col-zona">
+                            <span class="fondo-zona fondo-zona-roja">Zona Roja</span>
+                        </div>
+                    </article>
+                </div>
+                <footer class="pie-tabla">
+                    <span>N registros mostrados</span>
+                    <span>Datos anonimizados</span>
+                </footer>
+            </section>
+        </main>
+    </body>
+</html>
